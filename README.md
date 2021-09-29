@@ -5,10 +5,10 @@ This coding challenge was given to me to implement a KMeans Clustering Algorithm
 
 For comparison, I first wrote an example and a few graphs with a randomly generated dataset. Then, I attempted to create my own implementation of the KMeans algorithm with comparable results to that of the sklearn results. This assigment was to be completed within one hour.
 
-Here is a plotted example of the sklearn clustering implementation:
+Here is an example plot of the clusters. It includes centroid values from both my implementation and the sklearn implementation for comparison:
 
 <p align="center">
-  <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/kmeans_cluster_plot.png?raw=true" alt="Clusters with Centroid Plot">
+  <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/kmeans_clusters_CentroidComparisons.png?raw=true" alt="Clusters with Centroid Plot">
 </p>
 
 
