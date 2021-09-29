@@ -7,4 +7,6 @@ For comparison, I first wrote an example and a few graphs with a randomly genera
 
 Here is a plotted example of the sklearn clustering implementation:
 
-<center><img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/kmeans_cluster_plot.png?raw=true" alt="Clusters with Centroid Plot"></center>
+<p align="center">
+  <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/kmeans_cluster_plot.png?raw=true" alt="Clusters with Centroid Plot">
+</p>
