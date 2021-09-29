@@ -122,8 +122,8 @@ def c_dist(data, centroid):
             update_dist = euclid_distance(i, c)
             if minimum_dist > update_dist:
                 minimum_dist = update_dist
-                dist = j
-        dist.append(dist)
+                d = j
+        dist.append(d)
     return dist
     
 def cent_updating(data, dist, n):
@@ -143,18 +143,57 @@ def threshold(old, new):
     z = 0
     for i, j in zip(old, new):
         z += euclid_distance(i, j)
-    return z < 1e-10
+    return z < 1e-3
 
-def k_means(data, n):
+def my_k_means(data, n):
     centroid = centroids(data, n)
     
     while True:
-        oldc = centroids
+        oldc = centroid
         dist = c_dist(data, centroid)
-        centroid = cent_updating(data, n)
+        centroid = cent_updating(data, dist, n)
         if threshold(oldc, centroid):
-            return dist
+            return dist, centroid
 
 #%%
 
-k_means(coordinate_matrix, 4)
+# My Calculation
+
+my_kmc, centroids = my_k_means(coordinate_matrix, 4)
+
+# Accessing Centroid Tuples
+
+centroid_X = [i[0] for i in centroids]
+centroid_Y = [i[1] for i in centroids]
+
+#%% Plotting my Results
+
+# Use Pandas for Masking
+my_coordinate_df = pd.DataFrame(coordinate_matrix)
+my_coordinate_df['pred'] = my_kmc
+
+# Use Pandas for Masking
+coordinate_df = pd.DataFrame(coordinate_matrix)
+coordinate_df['pred'] = pred
+
+# Loop Through Cluster Number to Plot Each
+plt.figure(figsize=(8,6))
+plt.title("Clusters with Centroids", fontsize=16)
+plt.xlabel("Random x-value")
+plt.ylabel("Random y-value")
+for i in np.unique(pred):
+    plt.scatter(my_coordinate_df[coordinate_df['pred']==i][0],
+                my_coordinate_df[coordinate_df['pred']==i][1],
+                label=f"Cluster {i+1}")
+
+# Plot sklearn Centroids and My Implementation's Centroids    
+plt.scatter(k_means.cluster_centers_[:,0], k_means.cluster_centers_[:,1],
+            color='magenta', marker='x', s=80, label="Centroid")
+plt.scatter(centroid_X, 
+            centroid_Y,
+            color='chartreuse', 
+            marker='x', 
+            s=80, 
+            label="My Centroid")
+plt.legend(fontsize=16,bbox_to_anchor=(1,1), loc="upper left")
+plt.show()
