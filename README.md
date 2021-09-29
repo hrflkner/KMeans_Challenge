@@ -23,7 +23,7 @@ table {
   width: 50%;
   border-collapse: collapse;
 }
-<table>
+<table align='center'>
   <col>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
