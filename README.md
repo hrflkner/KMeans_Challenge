@@ -15,5 +15,5 @@ Here is a plotted example of the sklearn clustering implementation:
 To determine the inital number of clusters I also made the following elbow plot:
 
 <p align="center">
-  <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/elbow_inertia_visualization.png?raw=true" alt="Clusters with Centroid Plot">
+  <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/elbow_inertia_visualization.png?raw=true" alt="Clusters with Centroid Plot" width=400px height=auto>
 </p>
