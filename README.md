@@ -11,6 +11,63 @@ Here is an example plot of the clusters. It includes centroid values from both m
   <img src="https://github.com/hrflkner/KMeans_Challenge/blob/main/img/kmeans_clusters_CentroidComparisons.png?raw=true" alt="Clusters with Centroid Plot">
 </p>
 
+Here is a table to show the differences in the Centroid values from each implementation:
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+  border-collapse: collapse;
+}
+<table>
+  <col>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">My Implementation</th>
+    <th colspan="2" scope="colgroup">sklearn</th>
+  </tr>
+  <tr>
+    <th scope="col">X</th>
+    <th scope="col">Y</th>
+    <th scope="col">X</th>
+    <th scope="col">Y</th>
+  </tr>
+  <tr>
+    <th scope="row">Centroid 1</th>
+    <td>1.10041362</td>
+    <td>3.05174259</td>
+    <td>1.04798811</td>
+    <td>1.1345495</td>
+  </tr>
+  <tr>
+    <th scope="row">Centroid 2</th>
+    <td>1.00438464</td>
+    <td>1.11955788</td>
+    <td>3.18576148</td>
+    <td>0.9072616</td>
+  </tr>
+    <tr>
+    <th scope="row">Centroid 3</th>
+    <td>3.05447363</td>
+    <td>2.65856700</td>
+    <td>3.05447363</td>
+    <td>2.658567</td>
+  </tr>
+  <tr>
+    <th scope="row">Centroid 4</th>
+    <td>3.15083859</td>
+    <td>0.92733088</td>
+    <td>1.10041362</td>
+    <td>3.05174259</td>
+  </tr>
+</table>
+
 
 To determine the inital number of clusters I also made the following elbow plot:
 
