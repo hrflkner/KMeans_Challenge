@@ -13,16 +13,6 @@ Here is an example plot of the clusters. It includes centroid values from both m
 
 Here is a table to show the differences in the Centroid values from each implementation:
 
-table, td, th {
-  border: 1px solid black;
-}
-
-table {
-  font-size: 20px;
-  text-align: center;
-  width: 50%;
-  border-collapse: collapse;
-}
 <table align='center'>
   <col>
   <colgroup span="2"></colgroup>
